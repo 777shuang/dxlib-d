@@ -9,17 +9,32 @@ DXライブラリのD言語で使うためのポーティングライブラリ�
 
 - **DMD**
   - LDCやGDCでの動作は未確認です
-- [DXライブラリのDLL](https://github.com/777shuang/DxLib.dll/releases)
-  - DLLに加え**`DxLib.lib`も必要です**
-- `dxlib.d`
+- [DxLib.dll](https://github.com/777shuang/DxLib.dll/releases)
+- [DxLib.lib](https://github.com/777shuang/DxLib.dll/releases)
 
 ### ビルド方法
 
-ご自身のソースと`dxlib.d`、DXライブラリのlibファイル群を指定してコンパイル
-
-```
-dmd -m64 source.d dxlib.d DxLib.lib
-```
+- 作業ディレクトリにこのリポジトリをクローンします
+  ```
+  git clone https://github.com/777shuang/dxlib-d dxlib
+  ```
+  - もし作業ディレクトリがGitリポジトリの一部で、submoduleとして追加したいときは以下を実行します
+    ```
+    git submodule add https://github.com/777shuang/dxlib-d dxlib
+    ```
+- DXライブラリを使用するソースファイル冒頭でimportします。
+  ```D
+  import dxlib
+  ```
+- 作業ディレクトリに[DxLib.lib](https://github.com/777shuang/DxLib.dll/releases)を置きます
+- コンパイルします
+  ```
+  dmd -m64 source.d DxLib.lib 
+  ```
+  - もしくは、ソースファイル冒頭でDxLib.libをリンクする設定を記述します。dubで管理している場合などに有効です。
+    ```D
+    pragma(lib, "DxLib.lib")
+    ```
 
 ## dxlib-d自体の作成手順
 
