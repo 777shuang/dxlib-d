@@ -9,7 +9,7 @@ DXライブラリのD言語で使うためのポーティングライブラリ�
 
 - **DMD**
   - LDCやGDCでの動作は未確認です
-- [DXライブラリのDLL](https://github.com/777shuang/DxLib.dll)
+- [DXライブラリのDLL](https://github.com/777shuang/DxLib.dll/releases)
   - DLLに加え**`DxLib.lib`も必要です**
 - `dxlib.d`
 
