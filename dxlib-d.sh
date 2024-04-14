@@ -34,3 +34,4 @@ sed -i -z 's@}\n*extern[^\n]*\n{@//__!_injection_DxFunctionWin__\n@' dxlib.d
 sed -i -z -e 's/[^{]*{//' -e 's/}[^}]*//' dxfunctionwin.d
 sed -i -e '/__!_injection_DxFunctionWin__/rdxfunctionwin.d' -e '/__!_injection_DxFunctionWin__/d' dxlib.d
 rm dxfunctionwin.d
+mv dxlib.d package.d
