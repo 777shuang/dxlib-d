@@ -43,4 +43,5 @@ dmd -m64 source.d dxlib.d DxLib.lib
 ## 著作権表記
 
 dxlib.dには自動変換されたDXライブラリのコードが含まれています。
+
 DX Library Copyright (C) 2001-2024 Takumi Yamada.
